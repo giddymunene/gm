@@ -1,32 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Testimonials = () => {
-    const testimonials = [
-        {
-            name: 'Murithi Kanyama',
-            location: 'Gichugu',
-            feedback: 'Great Delivery and Trustworthy Cyber Café.',
-            image: 'https://via.placeholder.com/150', // Replace with actual image URL
-        },
-        {
-            name: 'Julius Kareithi',
-            location: 'Kianjokoma',
-            feedback: 'I like it as a cyber café extension. I can design, print, and download documents easily.',
-            image: 'https://via.placeholder.com/150', // Replace with actual image URL
-        },
-        {
-            name: 'ST.Matthews School',
-            location: 'Kianjokoma',
-            feedback: 'Great Printing and Networking Services.',
-            image: 'https://via.placeholder.com/150', // Replace with actual image URL
-        },
-        {
-            name: 'Kimani',
-            location: 'Kianjokoma',
-            feedback: 'I like the cyber.It offers very great printing and M-pesa services.',
-            image: 'https://via.placeholder.com/150', // Replace with actual image URL
-        },
-    ];
+    const [testimonials, setTestimonials] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchTestimonials = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/testimonials'); // Adjust URL if needed
+                if (!response.ok) {
+                    throw new Error('Failed to fetch testimonials');
+                }
+                const data = await response.json();
+                setTestimonials(data);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchTestimonials();
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
 
     return (
         <section id="testimonials" className="bg-light py-5">

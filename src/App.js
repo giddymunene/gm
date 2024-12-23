@@ -13,7 +13,7 @@ import Articles from './components/Articles';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AboutUs from './components/AboutUs';
-
+import FloatingHelpBubble from './components/FloatingHelpBubble'; // Import FloatingHelpBubble
 
 function App() {
   return (
@@ -21,7 +21,6 @@ function App() {
       <div>
         <Header />
         <Routes>
-          {/* Define routes for each component */}
           <Route path="/" element={<HeroSection />} />
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonials />} />
@@ -30,12 +29,9 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-
-
-          
-
         </Routes>
         <Footer />
+        <FloatingHelpBubble /> {/* Add Floating Help Bubble */}
       </div>
     </Router>
   );

@@ -1,0 +1,70 @@
+{
+  "posts": [
+    { "id": "1", "title": "Understanding Cybersecurity", "views": 150, "category": "Cyber Services", "publishedDate": "2024-01-10" },
+    { "id": "2", "title": "Cloud Security Best Practices", "views": 300, "category": "Cyber Services", "publishedDate": "2024-02-15" }
+  ],
+  "comments": [
+    { "id": "1", "text": "Great insights on cybersecurity!", "postId": "1", "userId": "1", "createdAt": "2024-01-11" },
+    { "id": "2", "text": "Very helpful tips for cloud security.", "postId": "2", "userId": "2", "createdAt": "2024-02-16" }
+  ],
+  "profile": {
+    "name": "typicode",
+    "role": "Admin",
+    "avatar": "https://example.com/images/typicode-avatar.png"
+  },
+  "cyberServices": [
+    { "id": "1", "title": "Network Security", "description": "Protect your network from unauthorized access.", "image": "https://example.com/images/network-security.png" },
+    { "id": "2", "title": "Data Encryption", "description": "Ensure secure data storage and transmission.", "image": "https://example.com/images/data-encryption.png" },
+    { "id": "3", "title": "Incident Response", "description": "Quickly respond to security breaches.", "image": "https://example.com/images/incident-response.png" }
+  ],
+  "clientImages": [
+    { "id": "1", "clientId": "1", "image": "https://example.com/client-images/client1.png", "uploadedAt": "2024-03-01" },
+    { "id": "2", "clientId": "2", "image": "https://example.com/client-images/client2.png", "uploadedAt": "2024-03-05" },
+    { "id": "3", "clientId": "3", "image": "https://example.com/client-images/client3.png", "uploadedAt": "2024-03-10" }
+  ],
+  "clients": [
+    { "id": "1", "name": "Client A", "contact": "clientA@example.com" },
+    { "id": "2", "name": "Client B", "contact": "clientB@example.com" },
+    { "id": "3", "name": "Client C", "contact": "clientC@example.com" }
+  ],
+  "users": [
+    { "id": "1", "name": "John Doe", "email": "john@example.com", "role": "User", "avatar": "https://example.com/images/john-doe-avatar.png" },
+    { "id": "2", "name": "Jane Smith", "email": "jane@example.com", "role": "User", "avatar": "https://example.com/images/jane-smith-avatar.png" }
+  ],
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "Murithi Kanyama",
+      "location": "Gichugu",
+      "feedback": "Great Delivery and Trustworthy Cyber Café.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "2",
+      "name": "Julius Kareithi",
+      "location": "Kianjokoma",
+      "feedback": "I like it as a cyber café extension. I can design, print, and download documents easily.",
+      "image": "https://via.placeholder.com/150"
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "title": "10 Tips for Cybersecurity at Home",
+      "description": "Learn how to secure your home network and protect your devices.",
+      "link": "https://example.com/articles/cybersecurity-at-home"
+    },
+    {
+      "id": "2",
+      "title": "Understanding Data Encryption",
+      "description": "An introduction to the importance of encrypting your data.",
+      "link": "https://example.com/articles/data-encryption"
+    },
+    {
+      "id": "3",
+      "title": "Best Practices for Cloud Security",
+      "description": "Keep your cloud-stored data safe with these tips.",
+      "link": "https://example.com/articles/cloud-security"
+    }
+  ]
+}
